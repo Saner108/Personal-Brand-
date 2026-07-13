@@ -22,7 +22,7 @@ const projects = [
     tech: ['Artificial Intelligence', 'Prompt Engineering', 'ChatGPT', 'Claude', 'Base44'],
     status: 'In Development',
     link: 'https://github.com/Saner108/nutricook-ai',
-    demo: 'https://vercel.com/nutri-cook1/nutricook-ai',
+    demo: 'https://nutricook-ai-kappa.vercel.app/',
     flagship: true,
   },
   {
