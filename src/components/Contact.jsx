@@ -17,7 +17,7 @@ const links = [
     value: 'linkedin.com/in/csanchez65',
     href: 'https://www.linkedin.com/in/csanchez65',
   },
-  { label: 'GitHub', value: 'github.com/[handle]', href: '[GitHub URL]' },
+  { label: 'GitHub', value: 'github.com/Saner108', href: 'https://github.com/Saner108' },
 ]
 
 export default function Contact() {

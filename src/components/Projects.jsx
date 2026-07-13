@@ -21,7 +21,7 @@ const projects = [
       'Designed the application using modern AI workflows, integrating ChatGPT, Claude, and Base44 to power prompt engineering, recommendation logic, and iterative product development. Building a scalable MVP that combines AI-assisted decision making, nutrition optimization, and budget tracking while following an end-to-end product development process from concept to deployment.',
     tech: ['Artificial Intelligence', 'Prompt Engineering', 'ChatGPT', 'Claude', 'Base44'],
     status: 'In Development',
-    link: '[GitHub URL]',
+    link: 'https://github.com/Saner108/nutricook-ai',
     demo: '[Live Demo URL]',
     flagship: true,
   },
@@ -35,7 +35,7 @@ const projects = [
       'Created normalized tables, relationships, queries, forms, and VBA-driven interface components to improve data accuracy, simplify record management, and streamline reporting. Applied database design principles to replace manual workflows with a structured information system that supports faster data retrieval and improved operational efficiency.',
     tech: ['Microsoft Access', 'SQL Queries', 'VBA', 'Relational Database Design', 'Database Normalization'],
     status: 'Completed',
-    link: '[GitHub URL]',
+    link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
     flagship: false,
   },
   {
@@ -48,7 +48,7 @@ const projects = [
       'Implemented scenario analysis to evaluate the long-term financial impact of different spending, saving, and investment strategies, transforming a traditional budget into an interactive forecasting and planning tool.',
     tech: ['Microsoft Excel', 'Financial Modeling', 'Forecasting', 'Scenario Analysis'],
     status: 'Completed',
-    link: '[GitHub URL]',
+    link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
     flagship: false,
   },
   {
@@ -61,7 +61,7 @@ const projects = [
       'Automated inventory tracking with structured data entry, improving stock visibility, reducing manual errors, and supporting more efficient weekly meal-preparation planning. The system streamlined inventory management and provided a repeatable process for operational decision-making.',
     tech: ['Microsoft Excel', 'Inventory Management', 'Process Improvement', 'Data Organization'],
     status: 'Completed',
-    link: '[GitHub URL]',
+    link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
     flagship: false,
   },
 ]
