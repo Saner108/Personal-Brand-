@@ -98,7 +98,7 @@ export default function Contact() {
             <a
               href="/resume.pdf"
               download="Cesar_Sanchez_Resume.pdf"
-              className="inline-flex items-center gap-3 border border-offwhite/20 px-7 py-4 text-sm font-body font-medium text-offwhite hover:border-offwhite/40 transition-colors duration-300 group"
+              className="inline-flex items-center gap-3 border border-offwhite/20 px-7 py-4 text-sm font-body font-medium text-offwhite hover:border-offwhite/40 active:scale-[0.98] transition duration-200 group"
             >
               <span>Download Resume</span>
               <svg
@@ -127,7 +127,7 @@ export default function Contact() {
           animate={inView ? 'visible' : 'hidden'}
           custom={5}
         >
-          <span>[Your Name] © {new Date().getFullYear()}</span>
+          <span>Cesar Sanchez © {new Date().getFullYear()}</span>
           <span>Built with React + Vite + Framer Motion</span>
         </motion.div>
       </div>

@@ -1,5 +1,5 @@
 import { useRef } from 'react'
-import { motion, useInView } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform, useReducedMotion } from 'framer-motion'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -63,8 +63,20 @@ const projects = [
 ]
 
 function ProjectCard({ project, index, inView }) {
+  const cardRef = useRef(null)
+  const reduceMotion = useReducedMotion()
+
+  // The gleam: a single scroll-scrubbed light sweep across the flagship
+  // product screenshot — the one place on the page where light moves.
+  const { scrollYProgress } = useScroll({
+    target: cardRef,
+    offset: ['start 0.9', 'center 0.35'],
+  })
+  const sweepX = useTransform(scrollYProgress, [0.15, 0.95], ['-130%', '130%'])
+
   return (
     <motion.article
+      ref={cardRef}
       className={`border border-offwhite/10 hover:border-offwhite/20 transition-colors duration-500 ${
         project.flagship ? 'lg:col-span-2' : ''
       }`}
@@ -129,12 +141,25 @@ function ProjectCard({ project, index, inView }) {
 
         {project.flagship && project.image && (
           <div className="mt-8 lg:mt-0 pt-8 lg:pt-0 border-t lg:border-t-0 lg:border-l border-offwhite/8 lg:pl-16 flex items-center justify-center">
-            <img
-              src={project.image}
-              alt={`${project.name} screenshot`}
-              loading="lazy"
-              className="max-h-[420px] w-auto border border-offwhite/10"
-            />
+            <div className="relative overflow-hidden border border-offwhite/10">
+              <img
+                src={project.image}
+                alt={`${project.name} screenshot`}
+                loading="lazy"
+                className="max-h-[420px] w-auto"
+              />
+              {!reduceMotion && (
+                <motion.div
+                  aria-hidden="true"
+                  className="absolute inset-0 pointer-events-none"
+                  style={{
+                    x: sweepX,
+                    background:
+                      'linear-gradient(105deg, transparent 40%, rgba(245,243,238,0.07) 50%, transparent 60%)',
+                  }}
+                />
+              )}
+            </div>
           </div>
         )}
 

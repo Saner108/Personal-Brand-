@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Certifications from './components/Certifications'
 import Education from './components/Education'
 import Contact from './components/Contact'
+import Section from './components/Section'
 
 export default function App() {
   return (
@@ -18,14 +19,28 @@ export default function App() {
           <Nav />
           <main>
             <Hero />
-            <About />
+            <Section>
+              <About />
+            </Section>
             <GradientThread />
-            <Projects />
-            <Skills />
-            <Experience />
-            <Certifications />
-            <Education />
-            <Contact />
+            <Section>
+              <Projects />
+            </Section>
+            <Section>
+              <Skills />
+            </Section>
+            <Section>
+              <Experience />
+            </Section>
+            <Section>
+              <Certifications />
+            </Section>
+            <Section>
+              <Education />
+            </Section>
+            <Section>
+              <Contact />
+            </Section>
           </main>
         </div>
       </MotionConfig>
