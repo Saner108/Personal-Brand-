@@ -1,4 +1,5 @@
 import { LazyMotion, domAnimation, MotionConfig } from 'framer-motion'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -42,6 +43,7 @@ export default function App() {
               <Contact />
             </Section>
           </main>
+          <SpeedInsights />
         </div>
       </MotionConfig>
     </LazyMotion>
