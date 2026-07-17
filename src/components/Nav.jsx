@@ -44,7 +44,7 @@ export default function Nav() {
             <a
               key={label}
               href={href}
-              className="text-xs uppercase tracking-[0.15em] text-offwhite/45 hover:text-offwhite transition-colors duration-200 font-body"
+              className="text-xs uppercase tracking-[0.15em] text-offwhite/60 hover:text-offwhite transition-colors duration-200 font-body"
             >
               {label}
             </a>

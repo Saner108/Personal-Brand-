@@ -88,11 +88,11 @@ function ProjectCard({ project, index, inView }) {
       <div className={`p-8 md:p-10 ${project.flagship ? 'lg:grid lg:grid-cols-[1fr_1fr] lg:gap-16' : ''}`}>
         <div>
           <div className="flex items-center gap-3 mb-6">
-            <span className="text-xs uppercase tracking-[0.18em] text-offwhite/30 font-body">
+            <span className="text-xs uppercase tracking-[0.18em] text-offwhite/60 font-body">
               {project.label}
             </span>
-            <span className="text-xs text-offwhite/20 font-body">·</span>
-            <span className="text-xs text-offwhite/30 font-body">{project.status}</span>
+            <span className="text-xs text-offwhite/60 font-body">·</span>
+            <span className="text-xs text-offwhite/60 font-body">{project.status}</span>
           </div>
 
           <h3
@@ -102,7 +102,7 @@ function ProjectCard({ project, index, inView }) {
             {project.name}
           </h3>
 
-          <p className="text-offwhite/50 font-body text-base mb-6 leading-relaxed">
+          <p className="text-offwhite/70 font-body text-base mb-6 leading-relaxed">
             {project.tagline}
           </p>
 
@@ -111,7 +111,7 @@ function ProjectCard({ project, index, inView }) {
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs font-body text-offwhite/40 border border-offwhite/10 px-3 py-1"
+                  className="text-xs font-body text-offwhite/60 border border-offwhite/10 px-3 py-1"
                 >
                   {t}
                 </span>
@@ -123,7 +123,7 @@ function ProjectCard({ project, index, inView }) {
             {project.link && (
               <a
                 href={project.link}
-                className="text-sm font-body text-offwhite/40 hover:text-offwhite transition-colors duration-200 tracking-wide"
+                className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
               >
                 {project.link} →
               </a>
@@ -131,7 +131,7 @@ function ProjectCard({ project, index, inView }) {
             {project.demo && (
               <a
                 href={project.demo}
-                className="text-sm font-body text-offwhite/40 hover:text-offwhite transition-colors duration-200 tracking-wide"
+                className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
               >
                 {project.demo} →
               </a>
@@ -175,7 +175,7 @@ function ProjectCard({ project, index, inView }) {
         {!project.flagship && !project.image && (
           <div className="mt-6 border border-dashed border-offwhite/10 py-10 flex items-center justify-center">
             {/* TODO: add Aquarium DB screenshot when provided */}
-            <p className="text-offwhite/25 font-body text-sm tracking-wide">
+            <p className="text-offwhite/60 font-body text-sm tracking-wide">
               Screenshot pending
             </p>
           </div>
@@ -193,7 +193,7 @@ export default function Projects() {
     <section id="projects" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}

@@ -47,7 +47,7 @@ export default function Certifications() {
     <section id="certifications" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -76,7 +76,7 @@ export default function Certifications() {
               animate={inView ? 'visible' : 'hidden'}
               custom={gi + 2}
             >
-              <h3 className="font-body font-medium text-xs uppercase tracking-[0.18em] text-offwhite/35 mb-5">
+              <h3 className="font-body font-medium text-xs uppercase tracking-[0.18em] text-offwhite/60 mb-5">
                 {group.category}
               </h3>
               <ul className="space-y-3">
@@ -85,11 +85,11 @@ export default function Certifications() {
                     key={item.name}
                     className="font-body text-sm md:text-base leading-snug flex items-start gap-2"
                   >
-                    <span className={item.inProgress ? 'text-offwhite/35' : 'text-offwhite/65'}>
+                    <span className={item.inProgress ? 'text-offwhite/60' : 'text-offwhite/80'}>
                       {item.name}
                     </span>
                     {item.inProgress && (
-                      <span className="shrink-0 text-[10px] uppercase tracking-wide text-clay/80 border border-clay/30 px-1.5 py-0.5">
+                      <span className="shrink-0 text-[10px] uppercase tracking-wide text-clay border border-clay/30 px-1.5 py-0.5">
                         In Progress
                       </span>
                     )}

@@ -37,7 +37,7 @@ export default function Hero() {
       >
         <div className="max-w-2xl">
           <motion.p
-            className="text-sm uppercase tracking-[0.2em] text-offwhite/40 mb-8 font-body"
+            className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-8 font-body"
             variants={fadeUp}
             initial="hidden"
             animate="visible"
@@ -58,7 +58,7 @@ export default function Hero() {
             <br />
             Business Analytics.
             <br />
-            <span className="text-offwhite/30">AI.</span>
+            <span className="text-offwhite/50">AI.</span>
           </motion.h1>
 
           <motion.p
@@ -86,7 +86,7 @@ export default function Hero() {
             </a>
             <a
               href="#contact"
-              className="inline-block px-8 py-3.5 text-sm font-body font-medium tracking-wide text-offwhite/50 hover:text-offwhite active:scale-[0.98] transition duration-200"
+              className="inline-block px-8 py-3.5 text-sm font-body font-medium tracking-wide text-offwhite/60 hover:text-offwhite active:scale-[0.98] transition duration-200"
             >
               Get in touch →
             </a>
@@ -110,7 +110,7 @@ export default function Hero() {
 
       {/* Subtle scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-6 md:left-12 lg:left-20 flex items-center gap-3 text-offwhite/25 text-xs tracking-widest uppercase font-body"
+        className="absolute bottom-8 left-6 md:left-12 lg:left-20 flex items-center gap-3 text-offwhite/60 text-xs tracking-widest uppercase font-body"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.4, duration: 1 }}

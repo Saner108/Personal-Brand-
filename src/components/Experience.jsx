@@ -51,7 +51,7 @@ export default function Experience() {
     <section id="experience" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -86,7 +86,7 @@ export default function Experience() {
                   {role.title}
                 </h3>
                 {role.org && (
-                  <p className="text-offwhite/40 font-body text-sm">{role.org}</p>
+                  <p className="text-offwhite/60 font-body text-sm">{role.org}</p>
                 )}
               </div>
               <p className="text-offwhite/55 font-body text-sm md:text-base leading-relaxed">

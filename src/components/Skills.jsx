@@ -59,7 +59,7 @@ export default function Skills() {
     <section id="skills" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -89,7 +89,7 @@ export default function Skills() {
               animate={inView ? 'visible' : 'hidden'}
               custom={gi + 2}
             >
-              <h3 className="font-body font-medium text-xs uppercase tracking-[0.18em] text-offwhite/35 mb-6">
+              <h3 className="font-body font-medium text-xs uppercase tracking-[0.18em] text-offwhite/60 mb-6">
                 {group.category}
               </h3>
               <ul className="space-y-3">

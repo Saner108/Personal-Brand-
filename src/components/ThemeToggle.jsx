@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState('dark')
@@ -18,13 +19,26 @@ export default function ThemeToggle() {
     document.documentElement.classList.toggle('light', next === 'light')
   }
 
+  const label = theme === 'dark' ? 'Light' : 'Dark'
+
   return (
     <button
       onClick={toggle}
       aria-label="Toggle color theme"
-      className="text-xs uppercase tracking-[0.15em] text-offwhite/45 hover:text-offwhite transition-colors duration-200 font-body"
+      className="relative text-xs uppercase tracking-[0.15em] text-offwhite/60 hover:text-offwhite transition-colors duration-200 font-body overflow-hidden inline-block h-4 w-12"
     >
-      {theme === 'dark' ? 'Light' : 'Dark'}
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={label}
+          className="absolute inset-0 flex items-center justify-end"
+          initial={{ opacity: 0, y: 4 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -4 }}
+          transition={{ duration: 0.14, ease: [0.22, 1, 0.36, 1] }}
+        >
+          {label}
+        </motion.span>
+      </AnimatePresence>
     </button>
   )
 }

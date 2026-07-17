@@ -24,7 +24,7 @@ export default function About() {
     <section id="about" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -101,12 +101,12 @@ export default function About() {
                 >
                   {value}
                 </div>
-                <div className="text-sm text-offwhite/40 font-body tracking-wide">{label}</div>
+                <div className="text-sm text-offwhite/60 font-body tracking-wide">{label}</div>
               </div>
             ))}
 
             <div className="border-t border-offwhite/10 pt-6">
-              <div className="text-sm text-offwhite/40 font-body tracking-wide mb-3">Currently</div>
+              <div className="text-sm text-offwhite/60 font-body tracking-wide mb-3">Currently</div>
               <div className="text-offwhite/70 font-body text-sm leading-relaxed">
                 Texas A&M University–Corpus Christi
                 <br />

@@ -31,7 +31,7 @@ export default function Education() {
     <section id="education" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -59,7 +59,7 @@ export default function Education() {
               <p className="text-offwhite/60 font-body text-base md:text-lg mb-2">
                 {school.degree}
               </p>
-              <p className="text-offwhite/35 font-body text-sm tracking-wide">{school.dates}</p>
+              <p className="text-offwhite/60 font-body text-sm tracking-wide">{school.dates}</p>
             </motion.div>
           ))}
         </div>

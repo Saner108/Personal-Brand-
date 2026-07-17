@@ -32,7 +32,7 @@ export default function Contact() {
     <section id="contact" ref={ref} className="px-6 md:px-12 lg:px-20 py-28 md:py-36 border-t border-offwhite/8">
       <div className="max-w-5xl">
         <motion.p
-          className="text-sm uppercase tracking-[0.2em] text-offwhite/30 mb-10 font-body"
+          className="text-sm uppercase tracking-[0.2em] text-offwhite/60 mb-10 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
@@ -55,7 +55,7 @@ export default function Contact() {
             </motion.h2>
 
             <motion.p
-              className="font-body text-offwhite/50 text-base md:text-lg max-w-md leading-relaxed mb-12"
+              className="font-body text-offwhite/70 text-base md:text-lg max-w-md leading-relaxed mb-12"
               variants={fadeUp}
               initial="hidden"
               animate={inView ? 'visible' : 'hidden'}
@@ -74,7 +74,7 @@ export default function Contact() {
             >
               {links.map(({ label, value, href }) => (
                 <div key={label} className="flex items-baseline gap-6 border-t border-offwhite/8 pt-5">
-                  <span className="text-xs uppercase tracking-[0.15em] text-offwhite/25 font-body w-16 shrink-0">
+                  <span className="text-xs uppercase tracking-[0.15em] text-offwhite/60 font-body w-16 shrink-0">
                     {label}
                   </span>
                   <a
@@ -121,7 +121,7 @@ export default function Contact() {
         </div>
 
         <motion.div
-          className="mt-24 border-t border-offwhite/8 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-offwhite/20 font-body"
+          className="mt-24 border-t border-offwhite/8 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-offwhite/60 font-body"
           variants={fadeUp}
           initial="hidden"
           animate={inView ? 'visible' : 'hidden'}
