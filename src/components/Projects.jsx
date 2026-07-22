@@ -15,9 +15,13 @@ const projects = [
     id: 'nutricook-ai',
     label: 'Flagship',
     name: 'NutriCook AI',
-    tagline:
-      'An AI-powered meal planning app that generates personalized plans from user goals, dietary needs, and budget — built by integrating Claude, ChatGPT, and Base44 into one working prototype, end to end.',
-    tech: ['Artificial Intelligence', 'Prompt Engineering', 'ChatGPT', 'Claude', 'Base44'],
+    problem:
+      'Meal planning that actually accounts for a person\'s goals, dietary constraints, and budget takes real time and expertise most people don\'t have.',
+    method:
+      'Built an AI-powered meal planning app integrating Claude, ChatGPT, and Base44 — end-to-end prototype from concept to working product, generating personalized plans with real macro/nutrition tracking.',
+    value:
+      'Demonstrates full-stack AI product development — prompt engineering, workflow design, and shipping a usable tool, not just a proof-of-concept.',
+    tech: ['Claude API', 'ChatGPT', 'Base44', 'Prompt Engineering', 'Product Development'],
     status: 'In Development',
     link: 'https://github.com/Saner108/nutricook-ai',
     demo: 'https://nutricook-ai-kappa.vercel.app/',
@@ -28,11 +32,16 @@ const projects = [
     id: 'nutrition-db',
     label: 'Project',
     name: 'Animal Diet & Nutrition Tracking Database',
-    tagline:
-      'A relational database that replaced a fully manual tracking process — normalized schema, VBA interface, built for real aquarium staff to use.',
-    tech: ['Microsoft Access', 'SQL Queries', 'VBA', 'Relational Database Design'],
+    problem:
+      'Aquarium staff needed to track animal diet and nutrition data with no formal system in place — informal tracking risked errors and slow retrieval.',
+    method:
+      'Designed and built a normalized Microsoft Access relational database with VBA interface elements, applying proper database design principles for a real institutional client.',
+    value:
+      'Shows database design fundamentals (normalization, relationships, queries) applied to a real operational need, not a classroom exercise.',
+    tech: ['Microsoft Access', 'VBA', 'Relational Database Design', 'Data Normalization'],
     status: 'Completed',
-    link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
+    // No public repo for this institutional client project — omit link per spec.
+    link: null,
     image: null,
     flagship: false,
   },
@@ -40,9 +49,13 @@ const projects = [
     id: 'financial-forecast',
     label: 'Project',
     name: 'Financial Forecasting Model',
-    tagline:
-      'A scenario-analysis tool that turns a static budget into a decision-support system — model out debt payoff vs. investing, before you commit.',
-    tech: ['Microsoft Excel', 'Financial Modeling', 'Forecasting', 'Scenario Analysis'],
+    problem:
+      'A static budget can\'t show how different financial decisions — debt payoff pace, savings rate, major purchases — play out over time.',
+    method:
+      'Built a scenario-analysis model in Excel that projects income, expenses, and net worth under different assumptions, turning a static budget into a dynamic decision-support tool.',
+    value:
+      'Demonstrates forecasting, sensitivity analysis, and financial modeling — core analyst skills applied to a real, ongoing personal use case.',
+    tech: ['Excel', 'Scenario Modeling', 'Sensitivity Analysis', 'Financial Forecasting'],
     status: 'Completed',
     link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
     image: '/images/financial-forecasting-screenshot.jpg',
@@ -52,9 +65,13 @@ const projects = [
     id: 'inventory-tracking',
     label: 'Project',
     name: 'Inventory Tracking System',
-    tagline:
-      'The first structured inventory process for a weekly nutrition program that had none — built from scratch, not retrofitted.',
-    tech: ['Microsoft Excel', 'Inventory Management', 'Process Improvement'],
+    problem:
+      'A weekly nutrition program had no formal inventory process — ingredients and supplies were tracked by memory, risking shortages mid-session.',
+    method:
+      'Built the first structured inventory tracking system from scratch, with category organization, variance tracking, and stock-level visibility.',
+    value:
+      'Shows the ability to design a system where none existed — structuring ambiguous, ad hoc processes into repeatable operations.',
+    tech: ['Excel', 'Pivot Tables', 'Variance Analysis', 'Process Design'],
     status: 'Completed',
     link: 'https://github.com/Saner108/Excel-Business-Analytics-Portfolio',
     image: '/images/inventory-tracker-screenshot.jpg',
@@ -96,15 +113,28 @@ function ProjectCard({ project, index, inView }) {
           </div>
 
           <h3
-            className="font-display font-semibold text-offwhite mb-3 tracking-tight"
+            className="font-display font-semibold text-offwhite mb-6 tracking-tight"
             style={{ fontSize: 'clamp(1.4rem, 2.5vw, 2rem)' }}
           >
             {project.name}
           </h3>
 
-          <p className="text-offwhite/70 font-body text-base mb-6 leading-relaxed">
-            {project.tagline}
-          </p>
+          <dl className="mb-8 space-y-5">
+            {[
+              ['Problem', project.problem],
+              ['Method', project.method],
+              ['Value', project.value],
+            ].map(([term, description]) => (
+              <div key={term}>
+                <dt className="text-[11px] uppercase tracking-[0.18em] text-offwhite/45 font-body mb-1.5">
+                  {term}
+                </dt>
+                <dd className="text-offwhite/70 font-body text-sm md:text-[15px] leading-relaxed">
+                  {description}
+                </dd>
+              </div>
+            ))}
+          </dl>
 
           {project.tech.length > 0 && (
             <div className="flex flex-wrap gap-2 mb-6">
@@ -119,24 +149,26 @@ function ProjectCard({ project, index, inView }) {
             </div>
           )}
 
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {project.link && (
-              <a
-                href={project.link}
-                className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
-              >
-                {project.link} →
-              </a>
-            )}
-            {project.demo && (
-              <a
-                href={project.demo}
-                className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
-              >
-                {project.demo} →
-              </a>
-            )}
-          </div>
+          {(project.link || project.demo) && (
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {project.link && (
+                <a
+                  href={project.link}
+                  className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
+                >
+                  {project.link} →
+                </a>
+              )}
+              {project.demo && (
+                <a
+                  href={project.demo}
+                  className="text-sm font-body text-offwhite/60 hover:text-offwhite transition-colors duration-200 tracking-wide"
+                >
+                  {project.demo} →
+                </a>
+              )}
+            </div>
+          )}
         </div>
 
         {project.flagship && project.image && (
